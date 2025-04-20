@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.Pos?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.demo.UserDashboardController"
+      spacing="30" style="-fx-background-color: #1c1c1c; -fx-padding: 40;" alignment="CENTER">
+
+    <Label text="Genereer QR-code" style="-fx-text-fill: #FFFFFF; -fx-font-size: 18px; -fx-font-weight: bold;" />
+
+    <GridPane alignment="CENTER" hgap="15" vgap="15" style="-fx-padding: 20;">
+        <Label text="Voer een link in:" GridPane.rowIndex="0" GridPane.columnIndex="0"
+               style="-fx-text-fill: #FFFFFF; -fx-font-size: 16px;" />
+
+        <TextField fx:id="linkField" GridPane.rowIndex="0" GridPane.columnIndex="1"
+                   promptText="https://..."
+                   style="-fx-background-color: #2c2c2c; -fx-text-fill: #FFFFFF; -fx-border-color: #6A5ACD; -fx-border-width: 2; -fx-font-size: 14px; -fx-padding: 5 10;" />
+
+        <Button fx:id="generateButton" text="Genereer QR-code" onAction="#handleGenerateQRCode"
+                GridPane.rowIndex="1" GridPane.columnSpan="2" GridPane.halignment="CENTER"
+                style="-fx-background-color: #6A5ACD; -fx-text-fill: #FFFFFF; -fx-font-size: 16px; -fx-font-weight: bold; -fx-padding: 12 20; -fx-border-radius: 5; -fx-background-radius: 5;" />
+
+        <Label fx:id="statusLabel" text="" GridPane.rowIndex="2" GridPane.columnSpan="2" GridPane.halignment="CENTER"
+               style="-fx-text-fill: #00FF00; -fx-font-size: 14px;" />
+    </GridPane>
+</VBox>
